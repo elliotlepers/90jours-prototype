@@ -1,0 +1,264 @@
+{"data" : [
+	{
+        "title": "Je mets une bouteille dans ma chasse d'eau.",
+        "impact_water": "12",
+        "status": "defi-waiting",
+        "type": "defi"
+    },
+    {
+        "title": "Je mets une bouteille dans ma chasse d'eau.",
+        "impact_water": "12",
+        "status": "defi-accepted",
+        "type": "defi"
+    },
+    {
+        "title": "Bravo !",
+        "impact_water": "12",
+        "type": "success_defi"
+    },
+    {
+        "impact_water": "215",
+        "impact_co2": "220",
+        "type": "stats_indiv"
+    },
+    {
+        "impact_water": "45500",
+        "impact_co2": "8630",
+        "type": "stats_coll"
+    },
+    {
+        "opening_days": "3",
+        "invited_ppl": "4",
+        "type": "stats_more"
+    },
+    {
+        "title": "Partagez votre réussite",
+        "button": "Partager",
+        "type": "share"
+    },
+    {
+        "title": "À demain",
+        "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
+        "type": "tomorrow"
+    },
+    {
+        "title": "Je fais pipi sous ma douche.",
+        "impact_water": "10",
+        "status": "defi-waiting",
+        "type": "defi"
+    },
+    {
+        "title": "D'accord.",
+        "text": "Nous vous proposerons ce défi plus tard",
+        "type": "defi"
+    },
+    {
+        "text": "Nous vous chargeons une nouvelle action."
+    },
+    {
+        "title": "J'apprends à identifier les conditions de production des œufs",
+        "status": "learning-waiting",
+        "type": "learning"
+    },
+    {
+        "title": "J'apprends à identifier les conditions de production des œufs",
+        "text": "Sur chaque œuf, nous retrouvons une série de caractères.",
+        "status": "learning-lesson",
+        "step": "1",
+        "type": "learning"
+    },
+    {
+        "title": "J'apprends à identifier les conditions de production des œufs",
+        "text": "Le chiffre placé avant le FR représente les conditions de production de l’œuf.",
+        "status": "learning-lesson",
+        "step": "2",
+        "type": "learning"
+    },
+    {
+        "title": "J'apprends à identifier les conditions de production des œufs",
+        "text": "Le 2 et le 3 correspondent à un œuf pondu par une poule se trouvant dans un hangar. Il vaut mieux privilégier les œufs avec un 0 ou un 1, produits en plein air.",
+        "status": "learning-lesson",
+        "button": "Terminer",
+        "step": "3",
+        "type": "learning"
+    },
+    {
+        "title": "Bravo !",
+        "text": "Vous venez d'apprendre à identifier les conditions de production de l'œuf.",
+        "type": "success_learning"
+    },
+    {
+        "opening_days": "3",
+        "invited_ppl": "4",
+        "type": "stats_more"
+    },
+    {
+        "title": "Partagez votre réussite",
+        "button": "Partager",
+        "type": "share"
+    },
+    {
+        "title": "À demain",
+        "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
+        "type": "tomorrow"
+    },
+    {
+        "title": "J'installe Amazon Killer sur mon navigateur.",
+        "impact_co2": "200",
+        "status": "defi-waiting",
+        "type": "defi"
+    },
+        {
+        "title": "Êtes-vous sûr&nbsp;?",
+        "text": "Vous ne pourrez plus jamais le refaire. Si vous hésitez, appuyer sur le Panic Button.",
+        "button": "Je me lance;Passer définitivement;Panic Button",
+        "status": "defi-never",
+        "type": "defi"
+    },
+    {
+        "text": "Nous vous chargeons une nouvelle action."
+    },
+    {
+        "title": "J'affiche le calendrier des fruits et légumes de saison dans ma cuisine.",
+        "status": "defi-waiting",
+        "type": "defi"
+    },
+    {
+        "title": "J'affiche le calendrier des fruits et légumes de saison dans ma cuisine.",
+        "status": "defi-accepted",
+        "type": "defi"
+    },
+    {
+        "title": "Bravo !",
+        "type": "success_defi"
+    },
+    {
+        "opening_days": "3",
+        "invited_ppl": "4",
+        "type": "stats_more"
+    },
+    {
+        "title": "Partagez votre réussite",
+        "button": "Partager",
+        "type": "share"
+    },
+    {
+        "title": "À demain",
+        "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
+        "type": "tomorrow"
+    },
+    {
+        "text": "Êtes-vous responsable des achats&nbsp;?",
+        "button": "Oui;Non",
+        "type": "question"
+    },
+    {
+        "title": "J'achète un sac de course réutilisable et transportable.",
+        "impact_co2": "30",
+        "status": "defi-waiting",
+        "type": "defi"
+    },
+    {
+        "title": "J'achète un sac de course réutilisable et transportable.",
+        "impact_co2": "30",
+        "status": "defi-accepted",
+        "type": "defi"
+    },
+    {
+        "title": "Bravo !",
+        "impact_co2": "30",
+        "type": "success_defi"
+    },
+    {
+        "impact_water": "215",
+        "impact_co2": "220",
+        "type": "stats_indiv"
+    },
+    {
+        "impact_water": "45500",
+        "impact_co2": "8630",
+        "type": "stats_coll"
+    },
+    {
+        "opening_days": "3",
+        "invited_ppl": "4",
+        "type": "stats_more"
+    },
+    {
+        "title": "Partagez votre réussite",
+        "button": "Partager",
+        "type": "share"
+    },
+    {
+        "title": "À demain",
+        "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
+        "type": "tomorrow"
+    },
+    {
+        "title": "Je configure un moteur de recherche éthique.",
+        "impact_co2": "300",
+        "status": "defi-waiting",
+        "type": "defi"
+    },
+    {
+        "title": "Je configure un moteur de recherche éthique.",
+        "text": "Je vais dans mes paramètres de navigateur.",
+        "step": "1",
+        "status": "defi-tutorial",
+        "type": "tutorial"
+    },
+    {
+        "title": "Je configure un moteur de recherche éthique.",
+        "text": "Je change mon moteur de recherche par défaut par www.ecosia.org.",
+        "step": "2",
+        "status": "defi-tutorial",
+        "type": "tutorial",
+        "button": "J'ai réussi"
+    },
+    {
+        "title": "Bravo !",
+        "impact_co2": "300",
+        "type": "success_defi"
+    },
+    {
+        "impact_water": "215",
+        "impact_co2": "220",
+        "type": "stats_indiv"
+    },
+    {
+        "impact_water": "45500",
+        "impact_co2": "8630",
+        "type": "stats_coll"
+    },
+    {
+        "opening_days": "3",
+        "invited_ppl": "4",
+        "type": "stats_more"
+    },
+    {
+        "title": "Partagez votre réussite",
+        "button": "Partager",
+        "type": "share"
+    },
+    {
+        "title": "À demain",
+        "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
+        "type": "tomorrow"
+    },
+    {
+        "title": "Je ne mange pas de viande ce midi.",
+        "impact_water": "1000",
+        "impact_co2": "300",
+        "time_left": "5h34",
+        "status": "defi-collectif",
+        "type": "defi"
+    },
+        {
+        "title": "Je ne mange pas de viande ce midi.",
+        "impact_water": "1000",
+        "impact_co2": "300",
+        "status": "defi-expired",
+        "type": "defi"
+    }
+]} 
+

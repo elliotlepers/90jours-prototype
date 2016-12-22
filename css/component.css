@@ -1,0 +1,256 @@
+@import "http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+
+html,
+body{
+	height: 100%;
+	width: 100%;
+	font-family: "paralucent", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	font-weight: 400;
+    background: #fff;
+}
+
+header{
+	height: 79px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid #dfdfdf;
+    position: absolute;
+    z-index: 999;
+    transform: translateY(0);
+    transition: all .4s ease;
+}
+
+.fp-viewing-screen1 header{
+    transform: translateY(-100%);
+}
+
+.topbar{
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar img{
+    height: 18px;
+    display: flex;
+}
+
+.slider{
+}
+
+.section{
+    padding-top: 110px;
+}
+
+.section.home, 
+.section.defi.defi-accepted, 
+.section.tutorial.defi-tutorial, 
+.section.defi.defi-collectif, 
+.section.learning.learning-question, 
+.section.learning.learning-lesson {
+    background-image: linear-gradient(45deg, #00A693 0%, #05B068 55%, #10C60C 100%); 
+    color: #fff !important;
+}
+
+.defi-expired h3, .defi-expired p{
+    opacity: .2;
+}
+
+
+.section.home .logo{
+    margin-bottom: 50px;
+}
+.section.home p{
+    color: #fff;
+    
+}
+
+.screen{
+    position: relative;
+    padding: 0 30px 0 40px;
+}
+
+h3, p{
+    line-height: .87;
+    margin-bottom: 30px;
+    display: block;
+}
+
+h3{
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.section.question p{
+    font-weight: 400;
+    font-size: 34px;
+}
+
+p{
+    font-size: 24px;
+    
+}
+p.impact {
+    font-size: 16px;
+    margin-top: 5em;
+}
+
+.green {
+    color: #028777;
+    border-bottom: #028777;
+}
+
+.white {
+    color: #fff;
+    border-bottom: #fff;
+}
+
+.label-positionner{
+    width: 200px;
+    height: 18px;
+    position: absolute;
+    top: 2px;
+    left: -190px;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+    text-align: right;
+}
+
+
+.label{
+    width: 100%;
+    white-space: nowrap;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.btn {
+	font-weight: 700;
+	font-size: 20px;
+    color: #028777;
+    border: 0;
+    line-height: 1.5;
+	border-bottom: 3px solid;
+    background: transparent;
+	display: inline-block;
+	margin: 0 10px 10px 0;
+	outline: none;
+	text-decoration: none;
+	transition: all ease .4s;
+    text-align: left;
+}
+
+.btn.btn-feat::before {
+	content: '\2192';
+	display: inline-block;
+    left: 10px;
+    position: absolute;
+}
+
+.btn.btn-sm{
+    color: #BBBBBB;
+    font-size: 14px;
+}
+
+.btn:hover {
+	background: rgba(0,0,0,.7);
+	color: #fff;
+}
+
+
+.btn-dark:hover{
+	background: #028777;
+}
+
+.btn-light{
+    color: #fff !important;
+}
+
+.btn-red{
+    color: #D0011B !important;
+}
+
+.btn-link{
+	background: transparent;
+	color: #333;
+}
+
+.defi .btn, .defi-accepted .btn, .learning .btn{
+    display: block;
+}
+
+.defi .btn-feat{
+    margin-bottom: 16px;
+}
+
+@-webkit-keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@-moz-keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@keyframes loader {
+	0% { background: #ddd; }
+	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+	66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+
+
+#section-2 ::-webkit-input-placeholder {
+   color: #eee;
+}
+
+#section-2 :-moz-placeholder { /* Firefox 18- */
+   color: #eee;  
+}
+
+#section-2 ::-moz-placeholder {  /* Firefox 19+ */
+   color: #eee;  
+}
+
+#section-2 :-ms-input-placeholder {  
+   color: #eee;  
+}
+
+
+.openabout{
+	text-align: center;
+	display: block;
+	margin-bottom: 14px;
+	cursor: pointer;
+}
+
+
+.credit{
+	text-align: center;
+	padding: 40px 0;
+	font-size: 20px;
+	text-decoration: underline;
+	font-weight: 500;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	cursor: pointer;
+}
+	
+	
