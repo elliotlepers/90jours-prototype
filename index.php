@@ -52,6 +52,9 @@
                         $n++;
                         echo '<div class="section '.$entry->type.' '.$entry->status.'" data-anchor="screen'.$n.'">';
                         echo '<div class="screen">';
+                        if ($entry->type == "nextday") {
+                            echo '<h3>Le lendemain</h3>';
+                        }
                         if ($entry->type == 'tutorial'){
                             echo '<span class="label-positionner"><span class="label">Étape '.$entry->step.'</span></span>'; 
                         } elseif ($entry->type == "tomorrow") {
@@ -194,24 +197,21 @@
                             echo '<p>Vous avez ouvert l\'appli</p><h3 class="green">'.$entry->opening_days.' jours de suite</h3>';
                             echo '<p>Et avez invité</p><h3 class="green">'.$entry->invited_ppl.' personnes</h3>';
                             echo $btn_next;
+                        } elseif ($entry->status == "defi-accepted" or $entry->status == "learning-question" or $entry->status == "learning-lesson" or $entry->status == "defi-tutorial" or $entry->status == "defi-collectif") {
+                            $buttons = explode(";", $entry->button);
+                            foreach ($buttons as &$button) {
+                                echo '<button class="btn btn-light">'.$button.'</button>';
+                            }
+                        } elseif ($entry->button != "") {
+                            $buttons = explode(";", $entry->button);
+                            foreach ($buttons as &$button) {
+                                echo '<button class="btn">'.$button.'</button>';
+                            }
                         } elseif ($entry->button == "" && $entry->status == "defi-accepted" or $entry->status == "learning-question" or $entry->status == "learning-lesson" or $entry->status == "defi-tutorial" or $entry->status == "defi-collectif"){
                             echo $btn_next_white;
                         } elseif ($entry->button == "") {
                             echo $btn_next;
-                        } else {
-                            if ($entry->status == "defi-accepted" or $entry->status == "learning-question" or $entry->status == "learning-lesson" or $entry->status == "defi-tutorial" or $entry->status == "defi-collectif") {
-                                $buttons = explode(";", $entry->button);
-                                foreach ($buttons as &$button) {
-                                    echo '<button class="btn btn-light">'.$button.'</button>';
-                                }
-                            }
-                            else {
-                                $buttons = explode(";", $entry->button);
-                                foreach ($buttons as &$button) {
-                                    echo '<button class="btn">'.$button.'</button>';
-                                }
-                            }
-                        }
+                        } 
                         
                         echo "</div>";
                         echo "</div>";
