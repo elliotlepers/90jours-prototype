@@ -6,66 +6,32 @@
         "type": "defi"
     },
     {
-        "title": "Je mets une bouteille dans ma chasse d'eau.",
-        "impact_water": "12",
-        "status": "defi-accepted",
-        "type": "defi"
-    },
-    {
-        "title": "Bravo !",
-        "impact_water": "12",
-        "type": "success_defi"
-    },
-    {
-        "impact_water": "215",
-        "impact_co2": "220",
-        "type": "stats_indiv"
-    },
-    {
-        "impact_water": "45500",
-        "impact_co2": "8630",
-        "type": "stats_coll"
-    },
-    {
-        "opening_days": "3",
-        "invited_ppl": "4",
-        "type": "stats_more"
-    },
-    {
-        "title": "Partagez votre réussite",
-        "button": "Partager",
-        "type": "share"
+        "type": "bravo"
     },
     {
         "title": "À demain",
-        "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
-        "type": "tomorrow"
-    },
-    {
-        "type": "nextday"
+        "text": "Vous pourrez commencer un nouveau défi demain.<br/>En attendant, <a href=\"#\">découvrez comment le réchauffement climatique altère les côtes bretonnes.</a>"
     },
     {
         "title": "Je fais pipi sous ma douche.",
         "impact_water": "10",
-        "status": "defi-waiting",
         "type": "defi"
     },
     {
         "title": "D'accord.",
-        "text": "Nous vous proposerons ce défi plus tard",
-        "type": "defi"
+        "text": "Nous vous proposerons ce défi plus tard"
     },
     {
         "text": "Nous vous chargeons une nouvelle action."
     },
     {
         "title": "J'apprends à identifier les conditions de production des œufs",
-        "status": "learning-waiting",
-        "type": "learning"
+        "status": "",
+        "type": "defi"
     },
     {
         "title": "J'apprends à identifier les conditions de production des œufs",
-        "text": "Sur chaque œuf, nous retrouvons une série de caractères.",
+        "text": "",
         "status": "learning-lesson",
         "step": "1",
         "type": "learning"
@@ -86,27 +52,12 @@
         "type": "learning"
     },
     {
-        "title": "Bravo !",
-        "text": "Vous venez d'apprendre à identifier les conditions de production de l'œuf.",
-        "type": "success_learning"
-    },
-    {
-        "opening_days": "3",
-        "invited_ppl": "4",
-        "type": "stats_more"
-    },
-    {
-        "title": "Partagez votre réussite",
-        "button": "Partager",
-        "type": "share"
+        "type": "bravo"
     },
     {
         "title": "À demain",
         "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
         "type": "tomorrow"
-    },
-    {
-        "type": "nextday"
     },
     {
         "title": "J'installe Amazon Killer sur mon navigateur.",
@@ -140,13 +91,7 @@
         "type": "defi"
     },
     {
-        "title": "J'affiche le calendrier des fruits et légumes de saison dans ma cuisine.",
-        "status": "defi-accepted",
-        "type": "defi"
-    },
-    {
-        "title": "Bravo !",
-        "type": "success_defi"
+        "type": "bravo"
     },
     {
         "opening_days": "3",
@@ -182,9 +127,6 @@
         "type": "tomorrow"
     },
     {
-        "type": "nextday"
-    },
-    {
         "text": "Êtes-vous responsable des achats&nbsp;?",
         "button": "Oui;Non",
         "type": "question"
@@ -196,9 +138,7 @@
         "type": "defi"
     },
     {
-        "title": "Bravo !",
-        "impact_co2": "30",
-        "type": "success_defi"
+        "type": "bravo"
     },
     {
         "title": "Partagez votre réussite",
@@ -231,9 +171,7 @@
         "button": "J'ai réussi"
     },
     {
-        "title": "Bravo !",
-        "impact_co2": "300",
-        "type": "success_defi"
+        "type": "bravo"
     },
     {
         "impact_water": "215",
@@ -259,9 +197,6 @@
         "title": "À demain",
         "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
         "type": "tomorrow"
-    },
-    {
-        "type": "nextday"
     },
     {
         "title": "Je ne mange pas de viande ce midi.",

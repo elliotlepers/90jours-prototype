@@ -38,126 +38,116 @@
                 <div class="screen">
                     <img class="logo" src="images/logo.svg"/>
                     <p>Votre assistant personnel de transition écologique</p>
-                    <button class="btn btn-light">Je me lance</button>
+                    <button class="btn btn-next btn-light">Je me lance</button>
                 </div>
             </div>
             <?php
+                
+                require("functions.php");
+            
                 $json_file = file_get_contents("data.json");
                 $data = json_decode($json_file);
                 $n = 1;
-                $btn_next = '<button class="btn">Continuer</button>';
-                $btn_next_white = '<button class="btn btn-light">Continuer</button>';
+                $btn_next = '<button class="btn btn-next">Continuer</button>';
                 foreach ($data as $name => $value) {
                     foreach ($value as $entry) {
                         $n++;
-                        echo '<div class="section '.$entry->type.' '.$entry->status.'" data-anchor="screen'.$n.'">';
+                        $classes = $entry->type.' '.$entry->status;
+                        if (
+                            $entry->status == "defi-accepted" or 
+                            $entry->status == "learning-question" or 
+                            $entry->status == "learning-lesson" or 
+                            $entry->status == "defi-tutorial" or 
+                            $entry->status == "defi-collectif"
+                        ){
+                            $classes .= " alt";
+                        }
+                        echo '<div class="section '.$classes.'" data-anchor="screen'.$n.'" id="slide'.$n.'">';
                         echo '<div class="screen">';
-                        if ($entry->type == "nextday") {
-                            echo '<h3>Le lendemain</h3>';
-                        }
-                        if ($entry->type == 'tutorial'){
-                            echo '<span class="label-positionner"><span class="label">Étape '.$entry->step.'</span></span>'; 
-                        } elseif ($entry->type == "tomorrow") {
-                            echo '<span class="label-positionner"><span class="label">À demain</span></span>';
-                        } elseif ($entry->type == "success_defi" or $entry->type == "success_learning") {
-                            echo '<span class="label-positionner"><span class="label">Succès</span></span>';
-                        } elseif ($entry->type == "stats_indiv" or $entry->type == "stats_coll" or $entry->type == "stats_more") {
-                            echo '<span class="label-positionner"><span class="label">Statistiques</span></span>';
-                        } elseif ($entry->type == "share") {
-                            echo '<span class="label-positionner"><span class="label">Partager</span></span>';
+                        
+                        echo '<button class="btn btn-sm btn-back">Retour</button>';
+                                       
+                        switch($entry->type){
+                            case "tutorial":
+                                $label = "Étape ".$entry->step;
+                                break;
+                            case "stats_indiv":
+                                $label = "Statistiques";
+                                break;
+                            case "stats_coll":
+                                $label = "Statistiques";
+                                break;
+                            case "stats_more":
+                                $label = "Statistiques";
+                                break;
+                            case "question":
+                                if($entry->step != ""){
+                                    $label = "Question ".$entry->step;
+                                }
+                                break;
+                            case "defi":
+                                if ($entry->status == "defi-collectif" or $entry->status == "defi-expired") {
+                                    $label = "Défi collectif";
+                                } else {
+                                    $label = "Défi";
+                                }
+                                break;
+                            default:
+                                $label = "";
+                                break;
                         }
                         
-                        if ($entry->type == 'question' && $entry->step != "" ){
-                            echo '<span class="label-positionner"><span class="label">Question '.$entry->step.'</span></span>';
-                        }  elseif ($entry->type == 'question') {
-                            echo '<span class="label-positionner"><span class="label">En savoir plus sur vous</span></span>';
+                        if($label != ""){
+                            echo '<span class="label-positionner"><span class="label">'.$label.'</span></span>';
                         }
                         
-                        if ($entry->status == "defi-accepted" or $entry->status == "learning-question" or $entry->status == "learning-lesson" or $entry->status == "defi-tutorial" or $entry->status == "defi-collectif") {
-                            echo '<h3 class="white">'.$entry->title.'</h3>';
-                            echo '<p class="white">'.$entry->text.'</p>';
-                        } else {
-                            echo '<h3 class="green">'.$entry->title.'</h3>';
-                            echo '<p class="green">'.$entry->text.'</p>';
+                        if($entry->title != ""){
+                            echo '<h3>'.$entry->title.'</h3>';
+                        }
+                        
+                        if($entry->text != ""){
+                            echo '<p>'.$entry->text.'</p>';
                         }
                         
                         if ($entry->type == "defi"){
-                            if ($entry->status == "defi-collectif" or $entry->status == "defi-expired") {
-                                 echo '<span class="label-positionner"><span class="label">Défi collectif</span></span>';
-                            } else {
-                                 echo '<span class="label-positionner"><span class="label">Défi</span></span>';
+                            
+                            impact($entry->impact_water, $entry->impact_co2);                            
+
+                            if ($entry->status == "defi-collectif"){
+                                echo '<p class="impact">Il vous reste 8 heures et 23 minutes pour réussir ce défi.</p>';
                             }
-                            if ($entry->status == "defi-waiting") {
-                                echo '<button class="btn btn-feat">Je me lance</button>';
+
+                            
+                            echo '<div class="start-btns">';
+                            echo '<button class="btn btn-start btn-feat">Je me lance</button>';
+                            echo '<button class="btn btn-success btn-next btn-feat">J\'ai réussi</button>';
+                            echo '</div>';
+                            
+                            if ($entry->status != "defi-collectif"){
+                                echo '<div class="sub-btns">';
                                 echo '<button class="btn btn-sm">Je le fais déjà</button>';
                                 echo '<button class="btn btn-sm">Je le ferai plus tard</button>';
                                 echo '<button class="btn btn-sm">Je ne le ferai jamais</button>';
-                                if ($entry->impact_water != "" && $entry->impact_co2 != "") {
-                                    echo '<p class="impact">Grâce à ce défi, j\'économiserai<br />'.$entry->impact_water.' L d\'eau par an.<br />J\'éviterai aussi de produire<br />'.$entry->impact_co2.' kg de CO<sub>2</sub> par an.</p>';
-                                } elseif ($entry->impact_water != "") {
-                                    echo '<p class="impact">Grâce à ce défi, j\'économiserai<br />'.$entry->impact_water.' L d\'eau par an.</p>';
-                                } elseif ($entry->impact_co2 != "") {
-                                    echo '<p class="impact">Grâce à ce défi, j\'éviterai de produire<br />'.$entry->impact_co2.' kg de CO<sub>2</sub> par an.</p>';
-                                };
-                                echo '<button class="btn btn-sm">En savoir plus</button>';
-                            } elseif ($entry->status == "defi-accepted"){
-                                echo '<button class="btn btn-feat btn-light">J\'ai réussi</button>';
-                                echo '<button class="btn btn-sm btn-light">Je le fais déjà</button>';
-                                echo '<button class="btn btn-sm btn-light">Je le ferai plus tard</button>';
-                                echo '<button class="btn btn-sm btn-light">Je ne le ferai jamais</button>';
-                                if ($entry->impact_water != "" && $entry->impact_co2 != "") {
-                                    echo '<p class="impact">Grâce à ce défi, j\'économiserai<br />'.$entry->impact_water.' L d\'eau par an.<br />
-                                    J\'éviterai aussi de produire<br />'.$entry->impact_co2.' kg de CO<sub>2</sub> par an.</p>';
-                                } elseif ($entry->impact_water != "") {
-                                    echo '<p class="impact">Grâce à ce défi, j\'économiserai<br />'.$entry->impact_water.' L d\'eau par an.</p>';
-                                } elseif ($entry->impact_co2 != "") {
-                                    echo '<p class="impact">Grâce à ce défi, j\'éviterai de produire<br />'.$entry->impact_co2.' kg de CO<sub>2</sub> par an.</p>';
-                                };
-                                echo '<button class="btn btn-sm btn-light">En savoir plus</button>';
-                            } elseif ($entry->status == "defi-collectif"){
-                                echo '<button class="btn btn-feat btn-light">J\'ai réussi</button>';
-                                echo '<p class="impact">Il vous reste '.$entry->time_left.' pour réussir ce défi.</p>';
-                                if ($entry->impact_water != "" && $entry->impact_co2 != "") {
-                                    echo '<p class="impact">Grâce à ce défi, j\'économiserai<br />'.$entry->impact_water.' L d\'eau par an.<br />
-                                    J\'éviterai aussi de produire<br />'.$entry->impact_co2.' kg de CO<sub>2</sub> par an.</p>';
-                                } elseif ($entry->impact_water != "") {
-                                    echo '<p class="impact">Grâce à ce défi, j\'économiserai<br />'.$entry->impact_water.' L d\'eau par an.</p>';
-                                } elseif ($entry->impact_co2 != "") {
-                                    echo '<p class="impact">Grâce à ce défi, j\'éviterai de produire<br />'.$entry->impact_co2.' kg de CO<sub>2</sub> par an.</p>';
-                                };
-                                echo '<button class="btn btn-sm btn-light">En savoir plus</button>';
-                            } elseif ($entry->status == "defi-expired"){
-                                echo '<p>Défi expiré</p>';
-                                if ($entry->impact_water != "" && $entry->impact_co2 != "") {
-                                    echo '<p class="impact">Grâce à ce défi, j\'aurais économisé<br />'.$entry->impact_water.' L d\'eau par an.<br />
-                                    J\'aurais aussi évité de produire<br />'.$entry->impact_co2.' kg de CO<sub>2</sub> par an.</p>';
-                                } elseif ($entry->impact_water != "") {
-                                    echo '<p class="impact">Grâce à ce défi, j\'aurais économisé<br />'.$entry->impact_water.' L d\'eau par an.</p>';
-                                } elseif ($entry->impact_co2 != "") {
-                                    echo '<p class="impact">Grâce à ce défi, j\'aurais évité de produire<br />'.$entry->impact_co2.' kg de CO<sub>2</sub> par an.</p>';
-                                };
-                                echo '<button class="btn btn-sm">En savoir plus</button>';
-                                echo $btn_next;
-                            } elseif ($entry->status == "defi-never") {
-                                echo '<button class="btn btn-feat">Je me lance</button>';
-                                echo '<button class="btn btn-sm">Passer définitivement</button>';
-                                echo '<button class="btn btn-sm btn-red">Panic Button</button>';
-                            } elseif($entry->step != "") {
-                                echo '<p class="white">'.$entry->text.'</p>';
-                                echo $btn_next;
-                            } else {
-                                echo $btn_next;
-                            };
-                        } elseif ($entry->type == "success_defi") {
-                            if ($entry->impact_water != "" && $entry->impact_co2 != "") {
-                                echo '<p>Vous économisez '.$entry->impact_water.' L d\'eau et évitez de produire '.$entry->impact_co2.' kg de CO<sub>2</sub> chaque année.</p>';
-                            } elseif ($entry->impact_water != "") {
-                                echo '<p>Vous économisez '.$entry->impact_water.' L d\'eau par an.</p>';
-                            } elseif ($entry->impact_co2 != "") {
-                                echo '<p>Vous évitez de produire '.$entry->impact_co2.' kg de CO<sub>2</sub> par an.</p>';
-                            };
-                            echo $btn_next;
+                                echo '</div>';
+                            }
+                            
+                            echo '<div class="never-btns">';
+                            echo '<button class="btn btn-next btn-feat">Je me lance</button>';
+                            echo '<button class="btn btn-next btn-sm">Passer définitivement</button>';
+                            echo '<button class="btn btn-next btn-sm btn-red">Panic Button</button>';
+                            echo '</div>';
+                            
+                        } elseif ($entry->type == "bravo") {
+                            
+                            echo '<h3>Bravo !</h3>';
+//                            impact($entry->impact_water, $entry->impact_co2);
+                            echo '<button class="btn btn-next">Partager</button><br/>';
+                            echo '<button class="btn btn-sm">Continuer</button>';
+                            
+                            
+                            
                         } elseif ($entry->type == "learning"){
+                            
                             if ($entry->step == "") {
                                 echo '<span class="label-positionner"><span class="label">Apprendre</span></span>';
                             } else {
@@ -168,51 +158,22 @@
                                 echo '<button class="btn btn-sm">Je le sais déjà</button>';
                                 echo '<button class="btn btn-sm">Je le ferai plus tard</button>';
                                 echo '<button class="btn btn-sm">Je ne le ferai jamais</button>';
-                            } elseif ($entry->status == "learning-question"){
+                            } 
+                        }
+                        
+                        
+                        if (($entry->type != "defi") && ($entry->type != "bravo")){
+                            if ($entry->button == ""){
+                                echo $btn_next;
+                            } else {
                                 $buttons = explode(";", $entry->button);
                                 foreach ($buttons as &$button) {
                                     echo '<button class="btn btn-light">'.$button.'</button>';
                                 }
-                            } elseif ($entry->status == "learning-lesson") {
-                                echo $btn_next_white;
-                            };
-                        } elseif ($entry->type == "success_defi") {
-                            if ($entry->impact_water != "" && $entry->impact_co2 != "") {
-                                echo '<p>Vous économisez '.$entry->impact_water.' L d\'eau et évitez de produire '.$entry->impact_co2.' kg de CO<sub>2</sub> chaque année.</p>';
-                            } elseif ($entry->impact_water != "") {
-                                echo '<p>Vous économisez '.$entry->impact_water.' L d\'eau par an.</p>';
-                            } elseif ($entry->impact_co2 != "") {
-                                echo '<p>Vous évitez de produire '.$entry->impact_co2.' kg de CO<sub>2</sub> par an.</p>';
-                            };
-                            echo $btn_next;
-                        } elseif ($entry->type == "stats_indiv") {
-                            echo '<p>Vous économisez chaque année</p><h3 class="green">'.$entry->impact_water.' L d\'eau</h3>';
-                            echo '<p>Et vous évitez aussi de produire<p><h3 class="green">'.$entry->impact_co2.' kg de CO<sub>2</sub></h3>';
-                            echo $btn_next;
-                        } elseif ($entry->type == "stats_coll") {
-                            echo '<p>Tous ensemble, Vous économisez chaque année<p><h3 class="green">'.$entry->impact_water.' L d\'eau</h3>';
-                            echo '<p>Et vous évitez aussi de produire</p><h3 class="green">'.$entry->impact_co2.' kg de CO<sub>2</sub></h3>';  
-                            echo $btn_next;
-                        } elseif ($entry->type == "stats_more") {
-                            echo '<p>Vous avez ouvert l\'appli</p><h3 class="green">'.$entry->opening_days.' jours de suite</h3>';
-                            echo '<p>Et avez invité</p><h3 class="green">'.$entry->invited_ppl.' personnes</h3>';
-                            echo $btn_next;
-                        } elseif ($entry->status == "defi-accepted" or $entry->status == "learning-question" or $entry->status == "learning-lesson" or $entry->status == "defi-tutorial" or $entry->status == "defi-collectif") {
-                            $buttons = explode(";", $entry->button);
-                            foreach ($buttons as &$button) {
-                                echo '<button class="btn btn-light">'.$button.'</button>';
                             }
-                        } elseif ($entry->button != "") {
-                            $buttons = explode(";", $entry->button);
-                            foreach ($buttons as &$button) {
-                                echo '<button class="btn">'.$button.'</button>';
-                            }
-                        } elseif ($entry->button == "" && $entry->status == "defi-accepted" or $entry->status == "learning-question" or $entry->status == "learning-lesson" or $entry->status == "defi-tutorial" or $entry->status == "defi-collectif"){
-                            echo $btn_next_white;
-                        } elseif ($entry->button == "") {
-                            echo $btn_next;
-                        } 
+                        }
                         
+                                                
                         echo "</div>";
                         echo "</div>";
                     }
