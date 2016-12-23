@@ -1,13 +1,22 @@
-jQuery(".slider").fullpage({
+$(".slider").fullpage({
 	navigation: false,
 	keyboardScrolling: true,
 	recordHistory: true,
-	lockAnchors: true,
-	animateAnchor: false,
+	lockAnchors: false,
+	animateAnchor: true,
 	touchSensitivity: 200,
-    verticalCentered: false
+    verticalCentered: false,
+    fadingEffect: "slides"
 });
 
-jQuery(".btn").on("click", function(){
-	jQuery.fn.fullpage.moveSectionDown();
+$(".btn-next").on("click", function(){
+	$.fn.fullpage.moveSectionDown();
+});
+
+$(".btn-start").on("click", function(){
+    $(".active").addClass("started hasback");
+});
+
+$(".btn-back").on("click", function(){
+   $(".active").removeClass("started hasback"); 
 });
