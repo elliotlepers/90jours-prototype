@@ -1,6 +1,6 @@
 {"data" : [
 	{
-        "title": "Je mets une bouteille dans ma chasse d'eau.",
+        "title": "Je mets une bouteille dans ma chasse d'eau",
         "impact_water": "12",
         "status": "defi-waiting",
         "type": "defi"
@@ -18,7 +18,7 @@
         "type": "defi"
     },
     {
-        "title": "D'accord.",
+        "title": "D'accord",
         "text": "Nous vous proposerons ce défi plus tard"
     },
     {
@@ -57,7 +57,7 @@
         "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes."
     },
     {
-        "title": "J'installe Amazon Killer sur mon navigateur.",
+        "title": "J'installe Amazon Killer sur mon navigateur",
         "impact_co2": "200",
         "type": "defi"
     },
@@ -136,7 +136,7 @@
         "button": "Continuer"
     },
     {
-        "title": "Je configure un moteur de recherche éthique.",
+        "title": "Je configure un moteur de recherche éthique",
         "text": "Je change mon moteur de recherche par défaut par www.ecosia.org.",
         "step": "2",
         "status": "defi-tutorial",
@@ -166,7 +166,7 @@
         "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes."
     },
     {
-        "title": "Je ne mange pas de viande ce midi.",
+        "title": "Je ne mange pas de viande ce midi",
         "impact_water": "1000",
         "impact_co2": "300",
         "time_left": "5h34",
@@ -174,7 +174,7 @@
         "type": "defi"
     },
         {
-        "title": "Je ne mange pas de viande ce midi.",
+        "title": "Je ne mange pas de viande ce midi",
         "impact_water": "1000",
         "impact_co2": "300",
         "status": "defi-expired",
