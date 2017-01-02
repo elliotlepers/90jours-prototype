@@ -26,12 +26,10 @@
     },
     {
         "title": "J'apprends à identifier les conditions de production des œufs",
-        "status": "",
         "type": "defi"
     },
     {
         "title": "J'apprends à identifier les conditions de production des œufs",
-        "text": "",
         "status": "learning-lesson",
         "step": "1",
         "type": "learning"
@@ -56,7 +54,7 @@
     },
     {
         "title": "À demain",
-        "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
+        "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes."
     },
     {
         "title": "J'installe Amazon Killer sur mon navigateur.",
@@ -92,21 +90,21 @@
     {
         "title": "À demain",
         "text": "Que représente le chiffre imprimé avant le FR sur un oeuf ?",
-        "button": "1- Le sexe du poussin;2- Lses conditions de production de l'oeuf",
+        "button": "1- Le sexe du poussin;2- Lses conditions de production de l'oeuf"
     },
     {
         "title": "À demain",
-        "text": "C'est bien ça, bravo !",
+        "text": "C'est bien ça, bravo !"
     },
     {
         "title": "À demain",
         "text": "Quels sont les oeufs produits en plein air ?",
-        "button": "1- Ceux avec un 0 ou un 1 avant le FR;2- Ceux avec un 2 ou un 3 avant le FR",
+        "button": "1- Ceux avec un 0 ou un 1 avant le FR;2- Ceux avec un 2 ou un 3 avant le FR"
     },
     {
         "title": "À demain",
         "text": "Raté, ce sont ceux avec un 0 ou un 1. Les autres sont produits par des poules en batterie.",
-        "button": "Relire la leçon ?;Continuer",
+        "button": "Relire la leçon ?;Continuer"
     },
     {
         "text": "Êtes-vous responsable des achats&nbsp;?",
@@ -165,7 +163,7 @@
     },
     {
         "title": "À demain",
-        "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
+        "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes."
     },
     {
         "title": "Je ne mange pas de viande ce midi.",
