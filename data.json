@@ -57,12 +57,10 @@
     {
         "title": "À demain",
         "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
-        "type": "tomorrow"
     },
     {
         "title": "J'installe Amazon Killer sur mon navigateur.",
         "impact_co2": "200",
-        "status": "defi-waiting",
         "type": "defi"
     },
         {
@@ -77,7 +75,6 @@
     },
     {
         "title": "J'affiche le calendrier des fruits et légumes de saison dans ma cuisine.",
-        "status": "defi-waiting",
         "type": "defi"
     },
     {
@@ -87,44 +84,29 @@
     },
     {
         "title": "J'affiche le calendrier des fruits et légumes de saison dans ma cuisine.",
-        "status": "defi-waiting",
         "type": "defi"
     },
     {
         "type": "bravo"
     },
     {
-        "opening_days": "3",
-        "invited_ppl": "4",
-        "type": "stats_more"
-    },
-    {
-        "title": "Partagez votre réussite",
-        "button": "Partager",
-        "type": "share"
-    },
-    {
         "title": "À demain",
         "text": "Que représente le chiffre imprimé avant le FR sur un oeuf ?",
         "button": "1- Le sexe du poussin;2- Lses conditions de production de l'oeuf",
-        "type": "tomorrow"
     },
     {
         "title": "À demain",
         "text": "C'est bien ça, bravo !",
-        "type": "tomorrow"
     },
     {
         "title": "À demain",
         "text": "Quels sont les oeufs produits en plein air ?",
         "button": "1- Ceux avec un 0 ou un 1 avant le FR;2- Ceux avec un 2 ou un 3 avant le FR",
-        "type": "tomorrow"
     },
     {
         "title": "À demain",
         "text": "Raté, ce sont ceux avec un 0 ou un 1. Les autres sont produits par des poules en batterie.",
         "button": "Relire la leçon ?;Continuer",
-        "type": "tomorrow"
     },
     {
         "text": "Êtes-vous responsable des achats&nbsp;?",
@@ -134,16 +116,10 @@
     {
         "title": "J'achète un sac de course réutilisable et transportable.",
         "impact_co2": "30",
-        "status": "defi-waiting",
         "type": "defi"
     },
     {
         "type": "bravo"
-    },
-    {
-        "title": "Partagez votre réussite",
-        "button": "Partager",
-        "type": "share"
     },
     {
         "text": "Nous vous chargeons une nouvelle action."
@@ -151,7 +127,6 @@
     {
         "title": "Je configure un moteur de recherche éthique.",
         "impact_co2": "300",
-        "status": "defi-waiting",
         "type": "defi"
     },
     {
@@ -189,14 +164,8 @@
         "type": "stats_more"
     },
     {
-        "title": "Partagez votre réussite",
-        "button": "Partager",
-        "type": "share"
-    },
-    {
         "title": "À demain",
         "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
-        "type": "tomorrow"
     },
     {
         "title": "Je ne mange pas de viande ce midi.",
