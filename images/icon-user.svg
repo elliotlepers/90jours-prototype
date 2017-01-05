@@ -10,7 +10,7 @@
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="top-bar-/-no-panic-button-/-default" transform="translate(-297.000000, -11.000000)">
             <g id="icon-user" transform="translate(297.000000, 11.000000)">
-                <circle id="user-mask" fill="#7ED321" cx="9" cy="9" r="9"></circle>
+                <circle id="user-mask" fill="#028777" cx="9" cy="9" r="9"></circle>
                 <mask id="mask-2" fill="white">
                     <use xlink:href="#path-1"></use>
                 </mask>

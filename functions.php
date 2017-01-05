@@ -4,9 +4,9 @@ function impact($impact_water, $impact_co2, $display_type){
     if ($impact_water != "" or $impact_co2 != "") {
         echo '<div class="impact">';
         if ($display_type == "multiple"){
-            echo '<p>Tous ensemble, ';            
+            echo '<p class="sm">Tous ensemble, ';            
         } else {
-            echo '<p>Grâce à ce défi, ';                        
+            echo '<p class="sm">Grâce à ce défi, ';                        
         }
         if ($impact_water != ""){
             if ($display_type == "multiple"){
@@ -26,13 +26,9 @@ function impact($impact_water, $impact_co2, $display_type){
             }
         }
         echo ' par an.';
-        echo '<button class="btn btn-sm btn-inline btn-more">En savoir plus</button>';
         echo '</p>';
         echo '</div>';
-    } else {
-        echo '<button class="btn btn-sm btn-more">En savoir plus</button>';        
     }
 }
-
 
 ?>

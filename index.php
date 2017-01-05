@@ -28,10 +28,27 @@
         
         <header>
             <div class="topbar">
-                <img class="burger" src="images/icon-burger.svg"/>
+                <button class="back">Retour</button>
                 <img class="user" src="images/icon-user.svg"/>
             </div>
         </header>
+        
+        <!-- Début de menu lorsque l'on clique sur icon-user -->
+        <div id="menu">
+            <div class="topbar">
+                <h4>Mon profil</h4>
+                <p>X</p>
+            </div>
+            <div id="profile">
+                <p>Bonjour Marine</p>
+                <p class="sm">Vous avez déjà réalisé</p>
+                <h3>8 défis</h3>
+                <button class="btn btn-sm">Tout voir</button>
+                <p class="sm">Vous économisez</p>
+                <h3>1500 litres</h3>
+                <p class="sm">d'eau chaque année</p>
+            </div>
+        </div>
         
         <div class="slider">
             <div class="section home" data-anchor="screen1">
@@ -83,6 +100,8 @@
                             case "question":
                                 if($entry->step != ""){
                                     $label = "Question ".$entry->step;
+                                } else {
+                                    $label = "Question";
                                 }
                                 break;
                             case "defi":
@@ -111,19 +130,25 @@
                         
                         if ($entry->type == "defi"){
                             
-                            impact($entry->impact_water, $entry->impact_co2);                            
-
                             if ($entry->status == "defi-collectif"){
-                                echo '<p class="impact">Il vous reste 8 heures et 23 minutes pour réussir ce défi.</p>';
+                                echo '<p class="sm">Il vous reste 8 heures et 23 minutes pour réussir ce défi.</p>';
+                            } elseif ($entry->status == "defi-expired"){
+                                echo '<p>Défi expiré</p>';
                             }
 
                             
-                            echo '<div class="start-btns">';
-                            echo '<button class="btn btn-start btn-feat">Je me lance</button>';
-                            echo '<button class="btn btn-success btn-next btn-feat">J\'ai réussi</button>';
-                            echo '</div>';
+                            if ($entry->status != "defi-expired"){
+                                echo '<div class="start-btns">';
+                                if ($entry->status == "defi-collectif") {
+                                    echo '<button class="btn btn-start btn-feat">J\'ai réussi</button>';
+                                } else {
+                                    echo '<button class="btn btn-start btn-feat">Je me lance</button>';
+                                }
+                                echo '<button class="btn btn-success btn-next btn-feat">J\'ai réussi</button>';
+                                echo '</div>';
+                            }
                             
-                            if ($entry->status != "defi-collectif"){
+                            if (($entry->status != "defi-collectif") && ($entry->status != "defi-expired")){
                                 echo '<div class="sub-btns">';
                                 echo '<button class="btn btn-sm">Je le fais déjà</button>';
                                 echo '<button class="btn btn-sm">Je le ferai plus tard</button>';
@@ -137,21 +162,25 @@
                             echo '<button class="btn btn-next btn-sm btn-red">Panic Button</button>';
                             echo '</div>';
                             
+                            impact($entry->impact_water, $entry->impact_co2);
+                            
+                            echo '<button class="btn btn-sm btn-inline btn-more">En savoir plus</button>';
+
+                            
                         } elseif ($entry->type == "bravo") {
                             
                             echo '<h3>Bravo !</h3>';
-//                            impact($entry->impact_water, $entry->impact_co2);
+                            impact($entry->impact_water, $entry->impact_co2);
+                            echo '<p>Partagez votre succès avec vos ami-e-s.</p>';
                             echo '<button class="btn btn-next">Partager</button><br/>';
                             echo '<button class="btn btn-sm">Continuer</button>';
-                            
-                            
-                            
+                      
                         } elseif ($entry->type == "learning"){
                             
                             if ($entry->step == "") {
                                 echo '<span class="label-positionner"><span class="label">Apprendre</span></span>';
                             } else {
-                                echo '<span class="label-positionner"><span class="label">Etape '.$entry->step.'</span></span>';
+                                echo '<span class="label-positionner"><span class="label">Étape '.$entry->step.'</span></span>';
                             }
                             if ($entry->status == "learning-waiting") {
                                 echo '<button class="btn btn-feat">Je me lance</button>';
@@ -168,7 +197,7 @@
                             } else {
                                 $buttons = explode(";", $entry->button);
                                 foreach ($buttons as &$button) {
-                                    echo '<button class="btn btn-light">'.$button.'</button>';
+                                    echo '<button class="btn">'.$button.'</button><br/>';
                                 }
                             }
                         }

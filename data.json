@@ -6,23 +6,13 @@
         "type": "defi"
     },
     {
-        "type": "bravo"
+        "type": "bravo",
+        "impact_water": "12"
     },
     {
         "title": "À demain",
-        "text": "Vous pourrez commencer un nouveau défi demain.<br/>En attendant, <a href=\"#\">découvrez comment le réchauffement climatique altère les côtes bretonnes.</a>"
-    },
-    {
-        "title": "Je fais pipi sous ma douche.",
-        "impact_water": "10",
-        "type": "defi"
-    },
-    {
-        "title": "D'accord",
-        "text": "Nous vous proposerons ce défi plus tard"
-    },
-    {
-        "text": "Nous vous chargeons une nouvelle action."
+        "text": "Vous pourrez commencer un nouveau défi demain.<br/>En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
+        "button": "Découvrir"
     },
     {
         "title": "J'apprends à identifier les conditions de production des œufs",
@@ -30,23 +20,24 @@
     },
     {
         "title": "J'apprends à identifier les conditions de production des œufs",
+        "text": "Les œufs ont une série de caractères imprimée sur la coque.",
         "status": "learning-lesson",
-        "step": "1",
+        "step": 1,
         "type": "learning"
     },
     {
         "title": "J'apprends à identifier les conditions de production des œufs",
         "text": "Le chiffre placé avant le FR représente les conditions de production de l’œuf.",
         "status": "learning-lesson",
-        "step": "2",
+        "step": 2,
         "type": "learning"
     },
     {
         "title": "J'apprends à identifier les conditions de production des œufs",
         "text": "Le 2 et le 3 correspondent à un œuf pondu par une poule se trouvant dans un hangar. Il vaut mieux privilégier les œufs avec un 0 ou un 1, produits en plein air.",
         "status": "learning-lesson",
-        "button": "Terminer",
-        "step": "3",
+        "button": "J'ai réussi",
+        "step": 3,
         "type": "learning"
     },
     {
@@ -54,31 +45,36 @@
     },
     {
         "title": "À demain",
-        "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes."
+        "text": "Vous pourrez commencer un nouveau défi demain.<br/>En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
+        "button": "Découvrir"
+    },
+    {
+        "text": "Nous aimerions beaucoup pouvoir vous donner des nouvelles très occasionnellement.<br/>Accepteriez-vous de recevoir nos super emails&nbsp;?",
+        "button": "Oui;Non",
+        "type": "question"
     },
     {
         "title": "J'installe Amazon Killer sur mon navigateur",
         "impact_co2": "200",
         "type": "defi"
     },
-        {
-        "title": "Êtes-vous sûr&nbsp;?",
-        "text": "Vous ne pourrez plus jamais le refaire. Si vous hésitez, appuyer sur le Panic Button.",
-        "button": "Je me lance;Passer définitivement;Panic Button",
-        "status": "defi-never",
+    {
+        "type": "bravo",
+        "impact_co2": "200"
+    },
+    {
+        "title": "À demain",
+        "text": "Vous pourrez commencer un nouveau défi demain.<br/>En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
+        "button": "Découvrir"
+    },
+    {
+        "title": "Je colle (enfin) un autocollant Stop Pub sur ma boîte aux lettres.",
+        "impact_water": "200",
         "type": "defi"
     },
     {
-        "text": "Nous vous chargeons une nouvelle action."
-    },
-    {
-        "title": "J'affiche le calendrier des fruits et légumes de saison dans ma cuisine.",
-        "type": "defi"
-    },
-    {
-        "title": "J'affiche le calendrier des fruits et légumes de saison dans ma cuisine.",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum ultricies dui ac volutpat. Nam mattis, neque sed viverra commodo, enim nibh euismod risus, quis efficitur ante lorem sed mi.",
-        "type": "defi"
+        "title": "D'accord",
+        "text": "Nous vous proposerons ce défi plus tard."
     },
     {
         "title": "J'affiche le calendrier des fruits et légumes de saison dans ma cuisine.",
@@ -89,22 +85,31 @@
     },
     {
         "title": "À demain",
-        "text": "Que représente le chiffre imprimé avant le FR sur un oeuf ?",
-        "button": "1- Le sexe du poussin;2- Lses conditions de production de l'oeuf"
+        "text": "Vous pourrez commencer un nouveau défi demain.<br/>En attendant, vérifiez vos connaissances sur les conditions de production des œufs.",
+        "button": "Je me lance"
+    },
+    {
+        "text": "Que représente le chiffre imprimé avant le FR sur un œuf&nbsp;?",
+        "button": "1- Le sexe du poussin;2- Les conditions de production de l'œuf",
+        "type": "question",
+        "step": 1
+    },
+    {
+        "text": "Raté.<br/>Ce chiffre représente les conditions de production des œufs."
+    },
+    {
+        "text": "Quel est l'œuf le plus respectueux de la nature&nbsp;?",
+        "button": "1- Celui avec un 0;2- Celui avec un 3",
+        "type": "question",
+        "step": 2
+    },
+    {
+        "text": "Bravo&nbsp;!<br/>Il vaut mieux privilégier les œufs avec un 0 ou un 1, produits en plein air.",
+        "button": "Revoir la leçon;Continuer"
     },
     {
         "title": "À demain",
-        "text": "C'est bien ça, bravo !"
-    },
-    {
-        "title": "À demain",
-        "text": "Quels sont les oeufs produits en plein air ?",
-        "button": "1- Ceux avec un 0 ou un 1 avant le FR;2- Ceux avec un 2 ou un 3 avant le FR"
-    },
-    {
-        "title": "À demain",
-        "text": "Raté, ce sont ceux avec un 0 ou un 1. Les autres sont produits par des poules en batterie.",
-        "button": "Relire la leçon ?;Continuer"
+        "text": "Vous pourrez commencer un nouveau défi demain."
     },
     {
         "text": "Êtes-vous responsable des achats&nbsp;?",
@@ -117,10 +122,9 @@
         "type": "defi"
     },
     {
-        "type": "bravo"
-    },
-    {
-        "text": "Nous vous chargeons une nouvelle action."
+        "title": "Êtes-vous sûr-e&nbsp;?",
+        "text": "Vous ne pourrez plus jamais le refaire.<br/>Si vous hésitez, utilisez le Panic Button.",
+        "button": "Je me lance;Passer définitivement;Panic Button"
     },
     {
         "title": "Je configure un moteur de recherche éthique.",
@@ -128,42 +132,13 @@
         "type": "defi"
     },
     {
-        "title": "Je configure un moteur de recherche éthique.",
-        "text": "Je vais dans mes paramètres de navigateur.",
-        "step": "1",
-        "status": "defi-tutorial",
-        "type": "tutorial",
-        "button": "Continuer"
-    },
-    {
-        "title": "Je configure un moteur de recherche éthique",
-        "text": "Je change mon moteur de recherche par défaut par www.ecosia.org.",
-        "step": "2",
-        "status": "defi-tutorial",
-        "type": "tutorial",
-        "button": "J'ai réussi"
-    },
-    {
-        "type": "bravo"
-    },
-    {
-        "impact_water": "215",
-        "impact_co2": "220",
-        "type": "stats_indiv"
-    },
-    {
-        "impact_water": "45500",
-        "impact_co2": "8630",
-        "type": "stats_coll"
-    },
-    {
-        "opening_days": "3",
-        "invited_ppl": "4",
-        "type": "stats_more"
+        "type": "bravo",
+        "impact_co2": "300"
     },
     {
         "title": "À demain",
-        "text": "En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes."
+        "text": "Vous pourrez commencer un nouveau défi demain.<br/>En attendant, découvrez comment le réchauffement climatique altère les côtes bretonnes.",
+        "button": "Découvrir"
     },
     {
         "title": "Je ne mange pas de viande ce midi",
