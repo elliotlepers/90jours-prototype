@@ -40,13 +40,55 @@
                 <p>X</p>
             </div>
             <div id="profile">
-                <p>Bonjour Marine</p>
-                <p class="sm">Vous avez déjà réalisé</p>
-                <h3>8 défis</h3>
+                <p>Bonjour,</p>
+                <div class="stat">
+                    <p class="sm">Vous avez déjà réalisé</p>
+                    <h3>8 défis</h3>
+                </div>
+                
                 <button class="btn btn-sm">Tout voir</button>
-                <p class="sm">Vous économisez</p>
-                <h3>1500 litres</h3>
-                <p class="sm">d'eau chaque année</p>
+
+                <div class="stat">
+                    <p class="sm">Vous économisez</p>
+                    <h3>1500 litres</h3>
+                    <p class="sm number">d'eau chaque année</p>
+                </div>
+                
+                <div class="stat">
+                    <p class="sm">Vous évitez de produire</p>
+                    <h3>2250 kg</h3>
+                    <p class="sm number">de CO<sub>2</sub> chaque année</p>
+                </div>
+                
+                <div class="stat">
+                    <p class="sm">Vous avez gagné</p>
+                    <h3>500 points</h3>
+                </div>
+                
+                <button class="btn btn-sm">Plus</button>
+                
+                <div class="settings-menu">
+                    <div class="settings-item">
+                        <p>Je fais un break</p>
+                        <p>&#9002;</p>
+                    </div>
+                </div>
+                
+                <div class="settings-menu">
+                    <div class="settings-item">
+                        <p>Nous contacter</p>
+                        <p>&#9002;</p>
+                    </div>
+                    <div class="settings-item">
+                        <p>Mentions légales</p>
+                        <p>&#9002;</p>
+                    </div>
+                    <div class="settings-item">
+                        <p>Paramètres</p>
+                        <p>&#9002;</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
         

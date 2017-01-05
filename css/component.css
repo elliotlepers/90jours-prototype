@@ -28,8 +28,8 @@ header{
 
 /* début de menu */
 
-#menu {
-    display: none;
+#menu{
+/*    display: none;*/
     height: 100%;
     width: 100%;
     z-index: 999;
@@ -39,8 +39,53 @@ header{
     left: 0;
 }
 
-#profile {
-    margin: 80px 30px 0 40px;
+#profile{
+    margin: 80px 0 0 40px;
+}
+
+#menu #profile .stat,
+#menu #profile .settings-item{
+    border-bottom: 1px solid #dfdfdf;
+}
+
+#profile .btn {
+    float: right;
+    margin-right: 30px;
+    margin-top: -10px;
+}
+
+.stat {
+    margin-bottom: 20px;
+    clear: both;
+}
+
+.stat h3,
+.stat p,
+.settings-item p{
+    margin-bottom: 10px;
+}
+
+.stat .number{
+    color: #028777;
+    margin-top: -10px;
+}
+
+.settings-menu{
+    margin-top: 30px;
+    clear: both;
+}
+
+.settings-item{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.settings-item p{
+    font-size: 20px;
 }
 
 .fp-viewing-screen1 header{
