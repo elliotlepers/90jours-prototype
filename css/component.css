@@ -21,9 +21,78 @@ header{
     background: #fff;
     border-bottom: 1px solid #dfdfdf;
     position: absolute;
-    z-index: 999;
+    z-index: 500;
     transform: translateY(0);
     transition: all .4s ease;
+}
+
+/* début de menu -- pour l'afficher, décommenter display:none; */
+
+#menu{
+/*    display: none;*/
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#profile{
+    margin: 80px 0 0 40px;
+}
+
+#menu #profile .stat,
+#menu #profile .settings-item{
+    border-bottom: 1px solid #dfdfdf;
+}
+
+#profile .btn {
+    float: right;
+    margin-right: 30px;
+    margin-top: -10px;
+}
+
+.stat {
+    margin-bottom: 20px;
+    clear: both;
+}
+
+.stat::before{
+    content: url(../images/icon-check.svg);
+	display: inline-block;
+    left: -10px;
+    position: absolute;
+}
+
+.stat h3,
+.stat p,
+.settings-item p{
+    margin-bottom: 10px;
+}
+
+.stat .number{
+    color: #028777;
+    margin-top: -10px;
+}
+
+.settings-menu{
+    margin-top: 30px;
+    clear: both;
+}
+
+.settings-item{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.settings-item p{
+    font-size: 20px;
 }
 
 .fp-viewing-screen1 header{
@@ -34,12 +103,29 @@ header{
     height: 40px;
     position: absolute;
     top: 30px;
-    left: 40px;
+    left: 60px;
     right: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+/* bouton retour à intégrer au JS pour certains écrans : defi-activated, later, never */
+
+.topbar .back {
+    font-weight: 400;
+    font-family: "paralucent", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    opacity: 1;
+    font-size: 16px;
+    color: #028777;
+}
+
+.topbar .back::before {
+    content: '\2329';
+	display: inline-block;
+    left: -25px;
+    position: absolute;
 }
 
 .topbar img{
@@ -73,7 +159,7 @@ header{
     transform: translateY(0);
 }
 
-h3, p{
+h3, p, .sub-btns{
     margin-bottom: 30px;
     display: block;
     transition: all ease .4s;
@@ -83,7 +169,7 @@ h3{
     font-size: 34px;
     font-weight: 700;
     line-height: .87;
-    color: #028777;
+    color: #028777; 
 }
 
 p{
@@ -92,15 +178,15 @@ p{
     color: #444;
 }
 
+p.sm{
+    font-size: 14px;
+}
+
 p a{
     color: inherit;
     border-bottom: 2px solid;
 }
 
-.section.question p{
-    font-weight: 400;
-    font-size: 34px;
-}
 
 .section.nextday {
     background: #000 !important;
@@ -110,7 +196,7 @@ p a{
 
 
 
-.section:before{
+.section::before{
     transition: all ease 1s;
     content: "";
     position: absolute;
@@ -122,9 +208,9 @@ p a{
     opacity: 0;
 }
 
-.section.home:before, 
-.section.alt:before,
-.section.started:before{
+.section.home::before, 
+.section.alt::before,
+.section.started::before{
     opacity: 1;
 }
 
@@ -179,8 +265,8 @@ p a{
     opacity: .6;
 }
 
-.defi-expired h3, .defi-expired p{
-    opacity: .2;
+.defi-expired h3, .defi-expired p.sm{
+    opacity: .4;
 }
 
 
@@ -295,7 +381,7 @@ p a{
 }
 
 .defi .btn-feat{
-    margin-bottom: 16px;
+    margin-bottom: 30px;
 }
 
 @-webkit-keyframes loader {
